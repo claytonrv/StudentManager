@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Gerenciador de estudantes de Pós-Graduação</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</h:head>
+<h:body>
+	<div id="container">
+		<div id="head">
+			<h:form>
+				<p:tabMenu activeIndex="#{param.i}">
+					<p:menuitem value="Home" outcome="/index.xhtml">
+						<f:param name="i" value="0" />
+					</p:menuitem>
+					<p:menuitem value="Cadastrar estudante"
+						outcome="studentRegister.xhtml">
+						<f:param name="i" value="1" />
+					</p:menuitem>
+				</p:tabMenu>
+			</h:form>
+		</div>
+
+		<div id="content">
+			<ui:insert name="content">
+                    [Template content will be inserted here]
+         </ui:insert>
+		</div>
+		<div id="footer"
+			style="position: fixed; left: 0px; bottom: 0px; height: 30px; width: 100%;">
+			<span> Copyright &#169; <h:outputText value="2015 |
+				Trabalho II (Aplicação Java Web) - [DSO II Sistemas de informação
+				UFSC] | Clayton Veras, Clayton Santos, Marcos Alexandre | Versão
+				1.0" />
+			</span>
+		</div>
+	</div>
+</h:body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
+		<h:form>
+			<p:spacer width="20" height="10" />
+			
+			<p:dataTable id="studentsTable" var="students" value="#{studentsController.students}" 
+						 paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+		                 paginatorAlwaysVisible="false" emptyMessage="Sem estudantes registrados no sistema." paginator="true" rows="10" 
+		                 style="margin-bottom:20px;">
+		                 <p:column headerText="Matricula" sortBy="#{students.enrollment}">
+		                 	<h:outputText value="#{students.enrollment}"/>
+		                 </p:column>
+		                 <p:column headerText="Nome" sortBy="#{students.name}">
+		                 	<h:outputText value="#{students.name}"/>
+		                 </p:column>
+		                 <p:column headerText="Instituição" sortBy="#{students.institution}">
+		                 	<h:outputText value="#{students.institution}"/>
+		                 </p:column>
+		                 <p:column headerText="Curso" sortBy="#{students.course}">
+		                 	<h:outputText value="#{students.course}"/>
+		                 </p:column>
+		                 <p:column headerText="Tempo para conclusão" sortBy="#{students.dead_line_to_conclusion}">
+		                 	<h:outputText value="#{students.dead_line_to_conclusion}"/>
+		                 </p:column>
+		                 <p:column headerText="Exame de qualificação" sortBy="#{students.qualification_examination}">
+		                 	<h:outputText value="#{students.qualification_examination}"/>
+		                 </p:column>
+		                 <p:column headerText="Proeficiencia em linguas" sortBy="#{students.language_proficiency}">
+		                 	<h:outputText value="#{students.language_proficiency}"/>
+		                 </p:column>
+			</p:dataTable>
+		</h:form>
+	</ui:define>
+</ui:composition>
