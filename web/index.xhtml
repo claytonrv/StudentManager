@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <b:row>
+            <b:column>
+                <b:navBar brand="Brand" brandHref="#" inverse="true">
+                    <b:navbarLinks>
+                        <b:navLink value="Home" href="#"></b:navLink>
+                        <b:navLink value="Link" href="#"></b:navLink>
+                        <b:navLink value="Link" href="#"></b:navLink>
+                    </b:navbarLinks>
+                </b:navBar>
+            </b:column>
+        </b:row>
+        <b:row id="tableHeader">
+            <b:column style="border: 1px solid black; border-radius: 5px" col-xs="4" col-md="2">
+                <f:facet name="header">
+                    Nome
+                </f:facet>
+                <h:outputText value="Nome"></h:outputText>
+            </b:column>
+            <b:column style="border: 1px solid black; border-radius: 5px" col-xs="4" col-md="2">
+                <f:facet name="header">
+                    Tipo de estudante
+                </f:facet>
+                <h:outputText value="Tipo de estudante"></h:outputText>
+            </b:column>
+            <b:column style="border: 1px solid black; border-radius: 5px" col-xs="4" col-md="2">
+                <f:facet name="header">
+                    Idade
+                </f:facet>
+                <h:outputText value="Idade"></h:outputText>
+            </b:column>
+            <b:column style="border: 1px solid black; border-radius: 5px" col-xs="4" col-md="2">
+                <f:facet name="header">
+                    Instituição
+                </f:facet>
+                <h:outputText value="Instituição"></h:outputText>
+            </b:column>
+            <b:column style="border: 1px solid black; border-radius: 5px" col-xs="4" col-md="2">
+                <f:facet name="header">
+                    Prazo maximo para conclusão
+                </f:facet>
+                <h:outputText value="Prazo maximo para conclusão"></h:outputText>
+            </b:column>
+            <b:column style="border: 1px solid black; border-radius: 5px" col-xs="4" col-md="2">
+                <f:facet name="header">
+                    Semestres cursados
+                </f:facet>
+                <h:outputText value="Semestres cursados"></h:outputText>
+            </b:column>
+        </b:row>
+    </h:body>
+</html>
+
