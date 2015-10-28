@@ -33,6 +33,15 @@
 		                 <p:column headerText="Proeficiencia em linguas" sortBy="#{students.language_proficiency}">
 		                 	<h:outputText value="#{students.language_proficiency}"/>
 		                 </p:column>
+		                 <p:column headerText="Publicação de artigos" sortBy="#{students.article_publications}">
+		                 	<h:outputText value="#{students.article_publications}"/>
+		                 </p:column>
+		                 <p:column headerText="Professor Orientador" sortBy="#{students.advisor_teacher}">
+		                 	<h:outputText value="#{students.advisor_teacher}"/>
+		                 </p:column>
+		                 <p:column headerText="Laboratorio de pesquisa" sortBy="#{students.research_laboratory}">
+		                 	<h:outputText value="#{students.research_laboratory}"/>
+		                 </p:column>
 			</p:dataTable>
 		</h:form>
 	</ui:define>

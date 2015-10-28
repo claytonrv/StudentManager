@@ -6,8 +6,7 @@
 package util;
 
 /**
- *
- * @author clayton veras & clayton santos
+ * @author Clayton Veras, Clayton Santos & Marcos Alexandre
  */
 public enum LanguagesEnum {
     

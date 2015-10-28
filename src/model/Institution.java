@@ -13,10 +13,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- *
- * @author clayton
+ * @author Clayton Veras, Clayton Santos & Marcos Alexandre
  */
-
 @Entity
 @Table(name = "INSTITUTION")
 public class Institution {

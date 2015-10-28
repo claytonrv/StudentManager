@@ -6,8 +6,7 @@
 package util;
 
 /**
- *
- * @author clayton
+ * @author Clayton Veras, Clayton Santos & Marcos Alexandre
  */
 public enum StudentTypeEnum {
     

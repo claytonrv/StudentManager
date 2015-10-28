@@ -11,8 +11,7 @@ import model.Institution;
 import java.util.List;
 
 /**
- *
- * @author clayton
+ * @author Clayton Veras, Clayton Santos & Marcos Alexandre
  */
 public interface InterfaceStudent {
     

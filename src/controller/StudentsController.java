@@ -1,6 +1,5 @@
 package controller;
 
-//import br.com.studentsmanager.data.StudentsRepository;
 import interfaces.InterfaceStudent;
 
 import java.util.List;
@@ -18,8 +17,7 @@ import data.StudentsRepository;
 
 
 /**
- *
- * @author clayton veras & clayton santos
+ * @author Clayton Veras, Clayton Santos & Marcos Alexandre
  */
 @ManagedBean
 @ViewScoped

@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
-import util.EvaluationEnum;
-import util.LanguagesEnum;
 import interfaces.InterfaceStudent;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -21,9 +15,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import util.EvaluationEnum;
+import util.LanguagesEnum;
+
 /**
- *
- * @author clayton veras & clayton santos
+ * @author Clayton Veras, Clayton Santos & Marcos Alexandre
  */
 public abstract class Student implements InterfaceStudent{
     
@@ -37,6 +33,9 @@ public abstract class Student implements InterfaceStudent{
     
     @Column(name = "ENROLLMENT")
     protected long enrollment;
+    
+    @Column(name="START_DATE")
+    protected Date start_date;
     
     @Column(name = "DEADLINE_CONCLUSION")
     protected int dead_line_to_conclusion;
@@ -57,6 +56,18 @@ public abstract class Student implements InterfaceStudent{
     @Column(name = "QUALIFICATION_EXAMINATION")
     @Enumerated(EnumType.STRING)
     protected EvaluationEnum qualification_examination;
+    
+    @Column(name = "ARTICLE_PUBLICATIONS")
+    @Enumerated(EnumType.STRING)
+    protected List<Article> article_publications;
+    
+    @Column(name = "ADVISOR_TEACHER")
+    @ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)
+    protected Teacher advisor_teacher;
+    
+    @Column(name = "RESEARCH_LABORATORY")
+    @ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)
+    protected ResearchLaboratory research_laboratory;
     
     @Override
     public String getName(){
@@ -79,9 +90,7 @@ public abstract class Student implements InterfaceStudent{
     }
     
     @Override
-    public int getDeadlineConclusion(){
-        return this.dead_line_to_conclusion;
-    }
+    public abstract int getDeadlineConclusion();
     
     @Override
     public abstract void setDeadlineConclusion(int deadlineConclusion);
@@ -122,6 +131,36 @@ public abstract class Student implements InterfaceStudent{
 
 	public void setCourse(String course) {
 		this.course = course;
+	}
+
+	public List<Article> getArticle_publications() {
+		return article_publications;
+	}
+
+	public abstract void setArticle_publications(List<Article> article_publications);
+
+	public Date getStart_date() {
+		return start_date;
+	}
+
+	public void setStart_date(Date start_date) {
+		this.start_date = start_date;
+	}
+
+	public Teacher getAdvisor_teacher() {
+		return advisor_teacher;
+	}
+
+	public void setAdvisor_teacher(Teacher advisor_teacher) {
+		this.advisor_teacher = advisor_teacher;
+	}
+
+	public ResearchLaboratory getResearch_laboratory() {
+		return research_laboratory;
+	}
+
+	public void setResearch_laboratory(ResearchLaboratory research_laboratory) {
+		this.research_laboratory = research_laboratory;
 	}
     
 }

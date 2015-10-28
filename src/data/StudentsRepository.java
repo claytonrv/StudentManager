@@ -13,8 +13,7 @@ import model.MastersDegreeStudent;
 import model.PhDStudent;
 
 /**
- *
- * @author clayton veras & clayton santos
+ * @author Clayton Veras, Clayton Santos & Marcos Alexandre
  */
 @ApplicationScoped
 public class StudentsRepository {

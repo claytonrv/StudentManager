@@ -10,9 +10,9 @@ import java.util.logging.Logger;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+
 /**
- *
- * @author clayton
+ * @author Clayton Veras, Clayton Santos & Marcos Alexandre
  */
 public abstract class AbstractRegistration<T> {
 	

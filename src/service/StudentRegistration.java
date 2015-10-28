@@ -11,8 +11,7 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
 /**
- *
- * @author clayton
+ * @author Clayton Veras, Clayton Santos & Marcos Alexandre
  */
 @Stateless
 public class StudentRegistration extends AbstractRegistration<InterfaceStudent>{
